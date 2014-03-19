@@ -30,7 +30,7 @@ if [ ! -d '/usr/local/pgsql/data' ]; then
 
   # Setup hstor
   su - postgres -l -c 'psql -d template1 -c "create extension hstore;"'
-fi
 
-# Create vagrant user
-su - postgres -l -c 'createuser vagrant -s'
+  # Create vagrant user
+  su - postgres -l -c 'createuser vagrant -s'
+fi
