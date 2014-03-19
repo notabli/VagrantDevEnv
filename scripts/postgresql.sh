@@ -1,3 +1,24 @@
+# Set up locals
+
+if [ ! -f /etc/profile.d/lang.sh ] ; then
+  touch /etc/profile.d/lang.sh
+fi
+
+if grep -lq  'en_US.UTF-8' /etc/profile.d/lang.sh ; then
+  echo 'Locals set up'
+else
+  echo 'export LANGUAGE="en_US.UTF-8"' >> /etc/profile.d/lang.sh
+  echo 'export LANG="en_US.UTF-8"' >> /etc/profile.d/lang.sh
+  echo 'export LC_ALL="en_US.UTF-8"' >> /etc/profile.d/lang.sh
+
+  locale-gen en_US.UTF-8
+  dpkg-reconfigure locales
+fi
+
+export LANGUAGE="en_US.UTF-8"
+export LANG="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
+
 # Install postgres
 apt-get install -y postgresql libpq-dev postgresql-contrib
 
