@@ -17,6 +17,7 @@ else
   rvm requirements
   rvm mount https://rvm.io/binaries/ubuntu/12.04/x86_64/ruby-2.1.0.tar.bz2
   rvm use 2.1.0 --default
+  gem update bundler
 fi
 
 echo 'Setting Ruby 2.1 as default'
