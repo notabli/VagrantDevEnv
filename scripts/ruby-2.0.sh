@@ -16,7 +16,7 @@ else
   rvm autolibs packages
   rvm requirements
   rvm mount https://rvm.io/binaries/ubuntu/12.04/x86_64/ruby-2.0.0-p353.tar.bz2
-  rvm use 2.0.0 --default
+  rvm use 2.0.0-p353 --default
   gem update bundler
 fi
 
