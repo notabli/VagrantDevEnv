@@ -10,14 +10,14 @@ fi
 
 source '/home/vagrant/.rvm/scripts/rvm'
 
-if rvm list strings | grep -lq ruby-2.1.0 ; then
-  echo 'Ruby 2.1.0 installed. Skipping installed.'
+if rvm list strings | grep -lq ruby-2.1.2 ; then
+  echo 'Ruby 2.1.2 installed. Skipping installed.'
 else
   rvm autolibs packages
   rvm requirements
-  rvm mount https://rvm.io/binaries/ubuntu/12.04/x86_64/ruby-2.1.0.tar.bz2
-  rvm use 2.1.0 --default
+  rvm mount https://rvm.io/binaries/ubuntu/12.04/x86_64/ruby-2.1.2.tar.bz2
+  rvm use 2.1.2 --default
   gem update bundler
 fi
 
-echo 'Setting Ruby 2.1 as default'
+echo 'Setting Ruby 2.1.2 as default'
