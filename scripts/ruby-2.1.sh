@@ -5,7 +5,7 @@
 if [[ -s "/home/vagrant/.rvm/scripts/rvm" ]] ; then
   echo 'RVM installed, skipping RVM install'
 else
-  curl -sSL https://get.rvm.io | bash -s stable
+  \curl -sSL https://get.rvm.io | bash -s -- --version 1.25.0
 fi
 
 source '/home/vagrant/.rvm/scripts/rvm'
