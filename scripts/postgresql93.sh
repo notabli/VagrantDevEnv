@@ -58,3 +58,6 @@ if [ ! -d '/usr/local/pgsql/data' ]; then
   # Create vagrant user
   su - postgres -l -c 'createuser vagrant -s'
 fi
+
+# allow the db to accessible on the host machine
+echo "host    all     all   0.0.0.0/0   trust" >> /etc/postgresql/9.3/main/pg_hba.conf
